@@ -1,0 +1,43 @@
+﻿@model Hospital.prescription
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Doctor.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>prescription</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.prescription1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prescription1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doctor.dname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctor.dname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.patient.pname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.patient.pname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
